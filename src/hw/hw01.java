@@ -1,14 +1,32 @@
 package hw;
+import java.util.Scanner;
 /*
- * Topic: è«‹å¯«ä¸€å€‹ éè¿´å‡½å¼)é€²è¡Œåé€²åˆ¶æ•¸å­—è½‰æ›æˆäºŒé€²åˆ¶æ•¸å­—ï¼Œä¾‹å¦‚åé€²åˆ¶çš„ 13 æœƒè¼¸å‡ºäºŒé€²åˆ¶çš„ 1101
+ * Topic: ½Ğ¼g¤@­Ó »¼°j¨ç¦¡)¶i¦æ¤Q¶i¨î¼Æ¦rÂà´«¦¨¤G¶i¨î¼Æ¦r¡A¨Ò¦p¤Q¶i¨îªº 13 ·|¿é¥X¤G¶i¨îªº 1101
+
  * Date: 2016/11/21
- * Author: 1050210XX å‘¨æ°¸æŒ¯è€å¸«
+ * Author: 105021007 ³¯ÄQ¦w
  */
 public class hw01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+Scanner scn=new Scanner (System.in);
+System.out.print("½Ğ¿é¤J");
+long n=scn.nextLong();
+String ans="";
+System.out.print(fun(n,ans));
+
+
 
 	}
+public static String fun(long n, String ans) {
+if(n==0){
+return "";
+}else{
+ans=Long.toString(n%2);
+return fun(n/2, ans)+(n%2); 
+}
+		
 
+	}
 }
