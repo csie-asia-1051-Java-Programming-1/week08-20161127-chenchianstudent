@@ -11,41 +11,38 @@ public class ex02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 Scanner scn=new Scanner(System.in);
-System.out.print("請輸入1-10");
+System.out.print("請輸入目前幾進制");
+float n1=scn.nextFloat();
+System.out.print("請輸入n");
 int n=scn.nextInt();
-
-fun1(n);
+System.out.print("請輸入要轉換的進制");
+int n2=scn.nextInt();
+fun1(n1,n,n2);
 
 }
 
-	
-public static void fun1(int n){
-	Scanner scn=new Scanner(System.in);
-	System.out.print("請輸入要轉的數字系統(轉二進位打2  轉16進位打16 轉8進位打8)");
-	int s=scn.nextInt();
-	if(s==2){int k,z;
-	String ans="";
-	if(n>=0&&n<2){
-		k=n%2; 
-		ans=k+ans;
-		}else{
-	k=n%2;
-	ans=k+ans; 
-	while(n/2!=0){ 
-	n=n/2; 
-	z=n%2; 
-	ans=z+ans; 
-	} 
+			
+public static void fun1(float n1,int n,int n2){
+//原理：http://www.smalljacky.com/introduction-to-computer/carry-digital-system-conversion/
+String ans="";
+int x=0;
+int sum=0;
+while(n>0){
+sum=sum+(n%10)*(int)Math.pow(n1,x);
+x++;
+n=n/10;
 	}
-	System.out.print(ans);
-	}else{
-	if(s==16){
-		String ans=Integer.toHexString(n);
-		System.out.print(ans);
-	}else{
-		String ans=Integer.toOctalString(n);
-		System.out.print(ans);
-	}	
-	}
+//先10進位轉換  下面開始做轉換
+if(n2==10){
+ans=Integer.toString(sum);
+System.out.print(ans);
+}
+while(sum!=n2-1){   
+ans=sum%n2+ans;
+sum=sum/n2;
+}
+ans=(n2-1)+ans;
+System.out.print(ans);		
+
 }
 }
