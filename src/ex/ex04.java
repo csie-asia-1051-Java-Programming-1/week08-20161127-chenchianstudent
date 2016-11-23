@@ -11,53 +11,62 @@ public class ex04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 Scanner scn=new Scanner(System.in);
-System.out.print("請輸入");
-double n=scn.nextDouble();
-System.out.print("請輸入加(+)、減(-)、乘(*)、除(/)、平方(2)、立方(3)、開根號(√)");
-char x=scn.next().charAt(0);
-computer(n,x);
-
+computer ans=new computer();
+System.out.print("請輸入加(+)減(-)乘(*)除(/)平方(2)立方(3)開根號(√)");
+char a=scn.next().charAt(0);
+switch(a){
+case('+'):
+	ans.ans1();
+case('-'):
+	ans.ans2();
+case('*'):
+	ans.ans3();
+case('/'):
+	ans.ans4();
+case('2'):
+	ans.ans5();
+case('3'):
+	ans.ans6();
+case('√'):
+	ans.ans7();
+   }
+     }
+	}		
+class computer{
+Scanner scn=new Scanner(System.in);
+public void  ans1(){
+float n=scn.nextFloat();			
+float m=scn.nextFloat();
+System.out.print(n+m);
+    }
+public void ans2(){
+float n=scn.nextFloat();			
+float m=scn.nextFloat();
+System.out.print(n-m);
 	}
-public static void computer(double n,char x){
-	Scanner scn=new Scanner(System.in);
-	if(x=='+'){
-		System.out.print("請輸入要加的數字");
-		double m=scn.nextDouble();
-		System.out.print((double) n+m);
-	}else{
-	if(x=='-'){
-		System.out.print("請輸入要減的數字");
-		double m=scn.nextDouble();
-		System.out.print((double) n-m);
-	}else{
-	if(x=='*'){
-		System.out.print("請輸入要乘的數字");
-		double m=scn.nextDouble();
-		System.out.print((double) n*m);
-	}else{
-	if(x=='/'){
-		System.out.print("請輸入要除的數字");
-		double m=scn.nextDouble();
-		System.out.print((double) n/m);
-	}else{
-	if(x=='2'){
-		double ans=Math.pow(n,2);
-		System.out.print((double)ans);
-	}else{
-	if(x=='3'){
-		double ans=Math.pow(n, 3);
-		System.out.print((double)ans);
-	}else{
-	if(x=='√'){
-		double ans=Math.sqrt(n);
-		System.out.print((double)ans);
-	}	
-	}	
-	}	
-	}	
-	}	
-	}	
-	}
+public void ans3(){
+float n=scn.nextFloat();			
+float m=scn.nextFloat();
+System.out.print(n*m);
+    }
+public void  ans4(){
+float n=scn.nextFloat();			
+float m=scn.nextFloat();
+System.out.print(n/m);
+    }
+public void  ans5(){
+float n=scn.nextFloat();			
+System.out.print(Math.pow(n,2));
+    }
+public void ans6(){
+float n=scn.nextFloat();			
+System.out.print(Math.pow(n,3));
+    }
+public void ans7(){
+float n=scn.nextFloat();
+System.out.println(Math.sqrt(n));
+    }
+	
 }
-
-}
+	
+	

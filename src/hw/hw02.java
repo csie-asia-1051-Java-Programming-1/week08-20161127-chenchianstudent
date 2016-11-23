@@ -1,8 +1,8 @@
 package hw;
 /*
- * Topic: 將前一題加強成可以做10以下的各種數字系統轉換 (必須使用遞迴)
+ * Topic: �N�e�@�D�[�j���i�H��10�H�U���U�ؼƦr�t���ഫ (�����ϥλ��j)
  * Date: 2016/11/21
- * Author: 1050210XX 周永振老師
+ * Author: 105021007 ���Q�w
  */
 public class hw02 {
 
