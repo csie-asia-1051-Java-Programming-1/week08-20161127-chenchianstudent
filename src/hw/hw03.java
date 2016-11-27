@@ -1,14 +1,30 @@
 package hw;
+import java.util.Scanner;
 /*
- * Topic: è«‹å¯«ä¸€å€‹éè¿´ç¨‹å¼ï¼Œè¼¸å…¥ä¸€å€‹ int å‹æ…‹çš„è³‡æ–™ï¼Œä¸¦å›å‚³è©²è³‡æ–™åœ¨äºŒé€²åˆ¶ä¸‹æœ‰å¤šå°‘å€‹ä½å…ƒæ˜¯ 1ï¼Œä¾‹å¦‚: è¼¸å…¥ 13 å¾—åˆ°çµæœç‚º 3
+ * Topic:½Ğ¼g¤@­Ó»¼°jµ{¦¡¡A¿é¤J¤@­Ó int «¬ºAªº¸ê®Æ¡A¨Ã¦^¶Ç¸Ó¸ê®Æ¦b¤G¶i¨î¤U¦³¦h¤Ö­Ó¦ì¤¸¬O 1¡A¨Ò¦p: ¿é¤J 13 ±o¨ìµ²ªG¬° 3
  * Date: 2016/11/21
- * Author: 1050210XX å‘¨æ°¸æŒ¯è€å¸«
+ * Author: 105021007 ³¯ÄQ¦w
  */
 public class hw03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+Scanner scn=new Scanner(System.in);
+int n =scn.nextInt();
+System.out.println(ans(n));
+	}
 
+public static int ans(int n) {
+if(n==0){
+return 0;
+}else{
+if(n%2==1){
+return ans(n/2)+1; 
+}else{
+return ans(n/2);
+}
+}
+	
 	}
 
 }
